@@ -1,0 +1,102 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.map-bg{
+    background-image: url('../src/images/Common/world_map-bg.png');
+}
+/* Base styles for the arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  scale: 0.8;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  /* transition: transform 0.3s ease, background-color 0.3s ease opacity 0.1s ease; */
+}
+
+/* Arrow icon styles */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  scale:0.8;
+  color: #fff;
+  font-size: 12px;
+  
+}
+
+
+/* Positioning for arrows */
+.swiper-button-next {
+  right: 10px;
+  transform: translateX(-20%);
+}
+
+.swiper-button-prev {
+  left: 10px;
+  transform: translateX(20%);
+}
+
+/* Hover effect for arrows */
+/* .swiper-button-next:hover,
+.swiper-button-prev:hover {
+ 
+  background-color: rgba(214, 248, 91, 0.8);    
+  opacity: 1; 
+} */
+
+/* Active (clicked) effect */
+
+/* Target the pagination bullets */
+/* Custom Swiper Pagination Bullets */
+.swiper-pagination-bullet {
+  background-color: #eee4e4; /* Change bullet color */
+  width: 10px; /* Change bullet size */
+  height: 10px; /* Change bullet size */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #bdb3b3; /* Change active bullet color */
+  width: 10px; /* Change active bullet size */
+  height: 10px; /* Change active bullet size */
+}
+
+.query-container{
+  background-image: url('./images/Common/farm-bg-2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ 
+}
+
+.filter-bg{
+  background-image: url('./images//Home/herosection/agro3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 450px) {
+  .swiper-button-next,
+  .swiper-button-prev{
+    display: none;
+  }
+
+  .swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+  
+  
+}
+
+
+}
